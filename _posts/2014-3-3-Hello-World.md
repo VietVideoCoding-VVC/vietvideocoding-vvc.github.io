@@ -14,7 +14,10 @@ Quá trình phát triển HEVC gần như được tiến hành ngay sau khi AVC
 Cha đẻ của công nghệ HEVC là các đại gia công nghệ  Samsung Qualcomm, LG, MediaTek, Microsof, SK Telecom, Huawei, và rất nhiều các công ty khác.
 Profile chính của HEVC (video 8bit) được hoàn thiện bản đẩu tiên vào năm 2013 với lộ trình phát triển như sau
 
+![Fig. 1](https://scontent-sjc3-1.xx.fbcdn.net/v/t1.0-9/82096064_2769894076404546_6734642701632798720_n.jpg?_nc_cat=104&_nc_sid=32a93c&_nc_ohc=umIuWiLBSDwAX-BfSWu&_nc_ht=scontent-sjc3-1.xx&oh=f96d7cb0bb28f9ff3483a9c156f74dc7&oe=5F2939B2)
+
 Figure 1: Lộ trình phát triển nén video , Source: SlideShare
+
 Công nghệ được mô tả trong phiên bản đầu tiên HEVC cho profile chính 8-bit đã được thực thi trong rất nhiều bộ giải mã cả phần cứng lẫn phần mềm và đã có mặt trong rất nhiều nhãn hiệu điện thoại thông minh, máy tính, truyền hình, đầu thu kỹ thuật số. HEVC được dự đoán sẽ được dùng trong cả truyền thông vệ tinh, truyền hình cap, truyền hình mặt đất, lĩnh vực game, và streaming cho tới cuối thập kỷ 2010-2019.
 Ai Sở Hữu HEVC
 
