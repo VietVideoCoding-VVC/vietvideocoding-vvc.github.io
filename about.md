@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About
+title: Giới thiệu
 permalink: /about/
 ---
 Công nghệ mã hoá và truyền tải video là một trong những công nghệ cơ bản, cốt lõi mà gần như tất cả các đại gia công nghệ đều sở hữu. Điển hình là nền tảng chia sẻ video Youtube/Facebook, bán nội dung Netflix, game streaming Twitch, gọi video FaceTime/Viber, những đại gia công nghệ mới nổi vì video như Bytedance với Tiktok, Xoom. Khi phần lớn cỡ 80% về kích thước nội dung số truyền tải trên mạng Internet là video, và tất cả các thiết bị truyền thông đa phương tiện đều được trang bị không chỉ một mà rất nhiều chuẩn mã hoá khác nhau. 
