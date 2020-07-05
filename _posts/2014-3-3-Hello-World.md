@@ -23,12 +23,15 @@ Ai Sở Hữu HEVC
 
 HEVC có tổng cộng 993 họ bằng sáng chế liên quan - được xác định dựa trên nhóm phân tích 6500 họ bằng sáng chế. Phần lớn số họ bằng sáng chế này được sở hữu bởi những công ty lớn tham gia quá trình chuẩn hóa phiên bản đầu tiên như Qualcomm, Samsung, LG, MediaTek, Huawei .v.v Tuy nhiên cũng có gần 75 công ty và viện nghiên cứu khác sở hữu bằng sáng chế định hình lên HEVC. Hình dưới đây mô tả những chủ sở hữu của công nghệ nén này.
 
+![Fig. 2](https://scontent-sjc3-1.xx.fbcdn.net/v/t1.0-9/81822421_2769896489737638_5627807892624113664_n.jpg?_nc_cat=111&_nc_sid=32a93c&_nc_ohc=Z2gLtNv_nv4AX8ktHnN&_nc_ht=scontent-sjc3-1.xx&oh=7ab4db9b1f7435c899fa2905f4a54463&oe=5F27FCC3)
 Figure 2: Phân bố sở hữu bản quyền của HEVC
 Họ bằng sáng chế giúp xác định rõ quy mô cũng như phạm vi bảo vệ của bằng sáng chế, đồng thời đưa cái nhìn sâu sắc vê những bằng sáng chế nào được bảo vệ ở những quốc gia nào. Nhìn vào các chủ sở hữu lớn nhất bản quyền HEVC được thống kê dưới đây.
 
+![Tab1](https://scontent-sjc3-1.xx.fbcdn.net/v/t1.0-9/81808257_2769897359737551_2213143377149427712_n.jpg?_nc_cat=104&_nc_sid=32a93c&_nc_ohc=F1WFwoavtDEAX-43jkv&_nc_ht=scontent-sjc3-1.xx&oh=67acd4f173aed220c307ef2f3bae7f88&oe=5F29876E)
 Table 1: Danh sách các công ty sở hữu nhiều bằng sáng chế HEVC nhất
 Một điều thú vị là, sở hữu của một số bằng sáng chế đã thay đổi trong những năm gần đây. Phân tích về 993 họ bằng sáng chế liên quan cho thấy 12% bằng sáng chế đã được chuyển chượng và mua bán lại.
 
+![Tab2](https://scontent-sjc3-1.xx.fbcdn.net/v/t1.0-9/82360274_2769898309737456_152901286709166080_n.jpg?_nc_cat=105&_nc_sid=32a93c&_nc_ohc=Ao4Uzxq3mUQAX_DigSv&_nc_ht=scontent-sjc3-1.xx&oh=464b8d961c140e24cd469970879db306&oe=5F2903EC)
 Table 2: Danh sách chuyển nhượng bản quyền
 Hãng Panasonic đã chuyển lượng lớn bằng sáng chế của mình cho các công ty khác. Thời điểm ban đầu chỉ có một Nhóm bằng sáng chế duy nhất là MPEG LA, thì Panassonic đã gửi gắm 5 bằng sáng chế của mình cho công ty Tagivan II LLC (trực thuộc của MPEG LA) năm 2014. Tuy nhiên sau đó, Panasonic lại bán đi 34 họ bằng sáng chế liên quan tới HEVC cho Sun Patent Trust.
 Hãng GE Video Compression đã mua tổng cộng 7 họ bằng sáng chế liên quan tới HEVC từ viện nghiên cứu Fraunhofer hàng đầu Đức, trong khi đó 75% bằng sáng chế của Dolby (9 trên tổng số 12) được mua lại từ các công ty khác như Sharp, France Telecom và Broadcom.
@@ -36,7 +39,7 @@ Nhóm bằng sáng chế: chuyển nhượng
 
 Mặc dù quá trình phát triển chuẩn HEVC là nỗ lực hợp tác từ nhiều công ty, bản quyền công nghệ HEVC không được định nghĩa như quá trình hợp tác hoặc được thống nhất lại. Thời điểm hiện tại có ít nhất 3 nhóm bằng sáng chế là MPEG LA, HEVC Advance, và Velos Media.
 
-
+![Tab3](https://scontent-sjc3-1.xx.fbcdn.net/v/t1.0-9/82042163_2769899386404015_188270149118197760_n.jpg?_nc_cat=110&_nc_sid=32a93c&_nc_ohc=nI1gX9zHk3sAX8LT8L7&_nc_ht=scontent-sjc3-1.xx&oh=b33dd1999b394e30f905776909da10df&oe=5F27469F)
 Table 3: Nhà cung ứng bằng sáng chế lớn
 
 Cả 3 nhà cung ứng bằng sáng chế trên đã bao gồm 4200 tài liệu bằng sáng chế được chia thành 560 họ bằng sáng chế. MPEG LA có phần lớn với 360 họ, HEVC Advance có 73, và Velos Media có 27. Trong số 460 họ bằng sáng chế trên thì có 321 họ liên quan tới mã nóa profile chính 8-bit của HEVC, đây cũng chiếm 1/3 số lượng bawgnf sáng chế liên quan tới HEVC.
@@ -44,13 +47,14 @@ Xây dựng có tính kế thừa
 
 Quá trình phát triển HEVC dựa trên việc cải tiến những công nghệ có sẵn trong H.264/AVC. Trong quá trình phát triển, HEVC cũng đã sử dụng lại những công nghệ có sẵn ở AVC. Hình 4 thể hiện tỷ lệ bắng sáng chế liên quan tới HEVC và AVC.
 
-
+![Fig.3](https://scontent-sjc3-1.xx.fbcdn.net/v/t1.0-9/82288139_2769900153070605_8380395979580375040_n.jpg?_nc_cat=109&_nc_sid=32a93c&_nc_ohc=5py-7BLz82sAX8UGpsr&_nc_ht=scontent-sjc3-1.xx&oh=7473909af12234b1b50e4716438e320e&oe=5F288903)
 Figure 3: Kế thừa từ AVC
 Gần 1/3 họ bằng sáng chế liên quan tới HEVC có liên hệ với AVC. Phần lớn các công ty sở hữu công nghệ đó là Fujitsu, NTT, và Panasonic.
 Kịch bản bản quyền cho HEVC
 
 Một điều rất đáng chú ý là chi phí bản quyền HEVC không thống nhất giữa các nhóm bằng sáng chế khác nhau. Mỗi nhóm bằng sáng chế có chiến lược cấp bằng sáng chế riêng, với nhiều loại và thiết bị khác nhau. Chi tiết mức đọ loằng ngoằng của cách tính phí bản quyền của AVC (MPEG-LA) và HEVC (MPEG-LA, HEVC Advance) như sau
 
+![Tab4](https://scontent-sjc3-1.xx.fbcdn.net/v/t1.0-9/p720x720/82125455_2769901806403773_7248006299844083712_n.jpg?_nc_cat=111&_nc_sid=32a93c&_nc_ohc=pXL_IHclGjAAX8utenz&_nc_ht=scontent-sjc3-1.xx&_nc_tp=6&oh=f29b8f4fedb741f2141ffbf1a76e2a35&oe=5F290404)
 Bảng 4: Cơ cấu bản quyền của AVC (MPEG LA)
 
 
