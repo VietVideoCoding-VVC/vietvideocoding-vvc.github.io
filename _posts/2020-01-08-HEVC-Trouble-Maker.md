@@ -2,6 +2,7 @@
 layout: post
 title: Mã Hóa Hiệu Năng Cao - H.265/HEVC: Kẻ kế nhiệm rắc rối
 ---
+# Mã Hóa Hiệu Năng Cao - H.265/HEVC: Kẻ kế nhiệm rắc rối
 
 (Bản dịch từ bản gốc Tiếng Anh, 2018/07, link ở cuối bài)
 H.265/HEVC là chuẩn mã hóa video với mục đích giảm một nửa băng thông so với chuẩn trước đó. Để đạt tỷ lệ nén gấp đôi chuẩn tiền nhiệm H.264/AVC. Để tăng được gáp đôi tỷ lệ nén, chuẩn HEVC được thành lập với những thuật toán phức tạp cho ước lượng chuyển động, dự đoán khung, và phân tách khung.
@@ -9,7 +10,7 @@ Việc giảm bitrate lên tới 50% so với AVC mà không làm thay đổi ch
 Công nghệ truyền thông đã lên tới truyền phát nội dung 4K - chứa gấp 4 lần số lượng điểm ảnh so với Full HD 1080p. Nếu không dùng HEVC, nhà đài muốn truyền nội dung 4K phải đối mặt với nhu cầu về băng thông rất cao. HEVC giúp hiện thực hóa truyền tải nội dung 4K, giúp giảm cả về chi phí lẫn thời gian truyền tải.
 Trong khi công nghệ nén này được mong chờ sẽ có mặt ở tât cả các bộ xử lý video, thiết bị hiển thị trong tương lai thì quá trình ứng dụng công nghệ này lại tiến triển rất chậm. Tất cả là do vấn đề bản quyền quá phức tạp.
 
-Quy trình phát triển HEVC
+## Quy trình phát triển HEVC
 Quá trình phát triển HEVC gần như được tiến hành ngay sau khi AVC được chuẩn hóa xong từ năm 2004. Người tiền nhiệm chuẩn AVC gần như trở thành định dạng phổ biến nhất cho cả chụp video, nén và phân phối nội dung video trên khắp thế giới.
 Cha đẻ của công nghệ HEVC là các đại gia công nghệ  Samsung Qualcomm, LG, MediaTek, Microsof, SK Telecom, Huawei, và rất nhiều các công ty khác.
 Profile chính của HEVC (video 8bit) được hoàn thiện bản đẩu tiên vào năm 2013 với lộ trình phát triển như sau
@@ -19,7 +20,8 @@ Profile chính của HEVC (video 8bit) được hoàn thiện bản đẩu tiên
 Figure 1: Lộ trình phát triển nén video , Source: SlideShare
 
 Công nghệ được mô tả trong phiên bản đầu tiên HEVC cho profile chính 8-bit đã được thực thi trong rất nhiều bộ giải mã cả phần cứng lẫn phần mềm và đã có mặt trong rất nhiều nhãn hiệu điện thoại thông minh, máy tính, truyền hình, đầu thu kỹ thuật số. HEVC được dự đoán sẽ được dùng trong cả truyền thông vệ tinh, truyền hình cap, truyền hình mặt đất, lĩnh vực game, và streaming cho tới cuối thập kỷ 2010-2019.
-Ai Sở Hữu HEVC
+
+## Ai Sở Hữu HEVC
 
 HEVC có tổng cộng 993 họ bằng sáng chế liên quan - được xác định dựa trên nhóm phân tích 6500 họ bằng sáng chế. Phần lớn số họ bằng sáng chế này được sở hữu bởi những công ty lớn tham gia quá trình chuẩn hóa phiên bản đầu tiên như Qualcomm, Samsung, LG, MediaTek, Huawei .v.v Tuy nhiên cũng có gần 75 công ty và viện nghiên cứu khác sở hữu bằng sáng chế định hình lên HEVC. Hình dưới đây mô tả những chủ sở hữu của công nghệ nén này.
 
@@ -43,14 +45,16 @@ Mặc dù quá trình phát triển chuẩn HEVC là nỗ lực hợp tác từ 
 Table 3: Nhà cung ứng bằng sáng chế lớn
 
 Cả 3 nhà cung ứng bằng sáng chế trên đã bao gồm 4200 tài liệu bằng sáng chế được chia thành 560 họ bằng sáng chế. MPEG LA có phần lớn với 360 họ, HEVC Advance có 73, và Velos Media có 27. Trong số 460 họ bằng sáng chế trên thì có 321 họ liên quan tới mã nóa profile chính 8-bit của HEVC, đây cũng chiếm 1/3 số lượng bawgnf sáng chế liên quan tới HEVC.
-Xây dựng có tính kế thừa
+
+## Xây dựng có tính kế thừa
 
 Quá trình phát triển HEVC dựa trên việc cải tiến những công nghệ có sẵn trong H.264/AVC. Trong quá trình phát triển, HEVC cũng đã sử dụng lại những công nghệ có sẵn ở AVC. Hình 4 thể hiện tỷ lệ bắng sáng chế liên quan tới HEVC và AVC.
 
 ![Fig.3](https://scontent-sjc3-1.xx.fbcdn.net/v/t1.0-9/82288139_2769900153070605_8380395979580375040_n.jpg?_nc_cat=109&_nc_sid=32a93c&_nc_ohc=5py-7BLz82sAX8UGpsr&_nc_ht=scontent-sjc3-1.xx&oh=7473909af12234b1b50e4716438e320e&oe=5F288903)
 Figure 3: Kế thừa từ AVC
 Gần 1/3 họ bằng sáng chế liên quan tới HEVC có liên hệ với AVC. Phần lớn các công ty sở hữu công nghệ đó là Fujitsu, NTT, và Panasonic.
-Kịch bản bản quyền cho HEVC
+
+## Kịch bản bản quyền cho HEVC
 
 Một điều rất đáng chú ý là chi phí bản quyền HEVC không thống nhất giữa các nhóm bằng sáng chế khác nhau. Mỗi nhóm bằng sáng chế có chiến lược cấp bằng sáng chế riêng, với nhiều loại và thiết bị khác nhau. Chi tiết mức đọ loằng ngoằng của cách tính phí bản quyền của AVC (MPEG-LA) và HEVC (MPEG-LA, HEVC Advance) như sau
 
