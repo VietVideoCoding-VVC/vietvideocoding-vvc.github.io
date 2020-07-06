@@ -1,11 +1,10 @@
 ---
 layout: post
-title: Mã Hóa Hiệu Năng Cao - H.265/HEVC: Kẻ kế nhiệm rắc rối
+title: "H.265/HEVC: Kẻ kế nhiệm rắc rối!"
+categories: HEVC, News
 ---
-# Mã Hóa Hiệu Năng Cao - H.265/HEVC: Kẻ kế nhiệm rắc rối
-
-(Bản dịch từ bản gốc Tiếng Anh, 2018/07, link ở cuối bài)
 H.265/HEVC là chuẩn mã hóa video với mục đích giảm một nửa băng thông so với chuẩn trước đó. Để đạt tỷ lệ nén gấp đôi chuẩn tiền nhiệm H.264/AVC. Để tăng được gáp đôi tỷ lệ nén, chuẩn HEVC được thành lập với những thuật toán phức tạp cho ước lượng chuyển động, dự đoán khung, và phân tách khung.
+
 Việc giảm bitrate lên tới 50% so với AVC mà không làm thay đổi chất lượng video, HEVC giúp tiết kiệm băng thông đông thời cho phép truyền tải video chất lượng cao hơn qua mạng Internet.
 Công nghệ truyền thông đã lên tới truyền phát nội dung 4K - chứa gấp 4 lần số lượng điểm ảnh so với Full HD 1080p. Nếu không dùng HEVC, nhà đài muốn truyền nội dung 4K phải đối mặt với nhu cầu về băng thông rất cao. HEVC giúp hiện thực hóa truyền tải nội dung 4K, giúp giảm cả về chi phí lẫn thời gian truyền tải.
 Trong khi công nghệ nén này được mong chờ sẽ có mặt ở tât cả các bộ xử lý video, thiết bị hiển thị trong tương lai thì quá trình ứng dụng công nghệ này lại tiến triển rất chậm. Tất cả là do vấn đề bản quyền quá phức tạp.

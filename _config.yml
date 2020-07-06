@@ -9,7 +9,9 @@ name: Việt Video Coding
 description: Chia sẻ kiến thức mã hoá và truyền tải video
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
-avatar: https://raw.githubusercontent.com/barryclark/jekyll-now/master/images/jekyll-logo.png
+avatar: https://avatars0.githubusercontent.com/u/59432120?s=400&u=c0540d418752c01d213e992453d75c554f64d18b&v=4
+
+#https://raw.githubusercontent.com/barryclark/jekyll-now/master/images/jekyll-logo.png
 
 #
 # Flags below are optional
@@ -19,9 +21,9 @@ avatar: https://raw.githubusercontent.com/barryclark/jekyll-now/master/images/je
 footer-links:
   dribbble:
   email: vietvideocoding@gmail.com
-  facebook: https://www.facebook.com/groups/vietvideocoding
+  facebook: groups/vietvideocoding
   flickr:
-  github: https://github.com/VietVideoCoding-VVC
+  github: VietVideoCoding-VVC
   instagram:
   linkedin:
   pinterest:
