@@ -23,10 +23,10 @@ Mọi chi tiết liên hệ, chia sẻ bài viết xin gửi về email: ngcthuo
 - Nguyễn Minh, PhD student, University of Klagenfurt, Austria. 
 
 
-### Thông tin liên hệ
-[vietvideocoding@gmail.com](mailto:vietvideocoding@gmail.com)
-[Facebook group]: https://jekyllrb.com/docs/home
-[Website]:   https://github.com/jekyll/jekyll
+## Thông tin liên hệ
+- Email: [vietvideocoding@gmail.com](mailto:vietvideocoding@gmail.com)
+- Facebook: [Facebook group](https://jekyllrb.com/docs/home)
+ 
 
 *VVC cũng là viết tắt cho chuẩn nén video mới nhất Versatile Video Coding - H.266 của MPEG, chuẩn hoá hoàn thành năm 2020. 
 
