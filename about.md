@@ -15,11 +15,10 @@ Vì vậy, nhóm **Việt Video Coding (VVC )** được thành lập với mụ
 
 Vì đây là những công nghệ bao gồm rất nhiều mảng, ngành khác nhau, nhóm luôn hi vọng và chào đón những bài viết, chia sẻ, cũng như của các bạn về chủ đề liên quan. Bên cạnh đó sẽ là những chia sẻ kinh nghiệm nghề nghiệp nếu các bạn muốn tìm hiểu và theo đuổi ngành công nghệ này. 
 
-## Đóng góp nội dung
+## Thành viên sáng lập 
 - Nguyễn Cảnh Thướng. Ph.D., Senior researcher, USA.  [Website](https://ngcthuong.github.io/).
 - Hoàng Văn Xiêm. Ph.D, Lecturer/Asst. Prof VNU-UET, Vietnam. [Website](https://sites.google.com/site/xiemhoang/home?authuser=0).
-- Nguyễn Minh, PhD student, University of Klagenfurt, Austria. 
-
+- Nguyễn Minh, PhD student, University of Klagenfurt, Austria. [Website](https://sites.google.com/view/minhnguyenkstn?fbclid=IwAR36uahlOXj6kYKtT0_QSZDsVexMk9esnC2ny0SsgJLudQIRFgeSR1OE0AM)
 
 ## Thông tin liên hệ
 Mọi chi tiết liên hệ, chia sẻ bài viết xin gửi về 
