@@ -18,7 +18,7 @@ Vậy nên cùng một camera có thể trả về chất lượng video khác n
 Ví dụ khung hình thứ 1 và thứ 5 chất lượng khác nhau rất lớn. Lý do là do đặc tính mã hóa video là mã hóa suy hao. Nên chất lượng các khung hình được thiết kế nén sao cho thứ tự tăng giảm đan xen để tận dụng đặc tính lưu ảnh của mắt người. Ví dụ 1 ảnh chất lượng cao, 3 ảnh chất lượng kém diễn ra trong khoảng thời gian ngắn thì mắt người không cảm nhận được. 
 Trong khi xử lý dữ liệu video, các bạn thường không dung tất cả các khung hình, mà chỉ dung một phần của nó, vậy thì chọn khung hình nào? 
 
-![Group-of-picture-4](images/MLVD_fig1.png)
+![image](/assets/images/MLVD_fig1.png)
 
 Mã hóa video nếu không trong trạng thái cấu hình nhóm khung (Group of Pictures) động, tức là sẽ dung nhóm khung tĩnh cố định. Thường ở dạng 8, 16 hoặc 32, khung ảnh hình thành một nhóm. Vì vậy nên trích suất các khung hình có vị trí chia hết cho 8. Nếu muốn lấy nhiều hơn thì chia hết cho 4, rồi tới 2.  
 (chi tiết hơn mình sẽ trình bày ở bài khác). 
@@ -29,12 +29,11 @@ Decoding order: là thứ tự giải mã các khung hình.
 4. Việc truy suất các khung hình
 Ví dụ bạn muốn truy suất khung hình thứ POC3 ở phần trên, thì thực chất bạn phải chờ giải mã hết 4 khung hình trước đó thì mới tới POC3. Như vậy việc trích suất khung hình nào ảnh hưởng nhiều đến độ trễ cho ứng dụng. Vậy nếu bạn nổi hứng muốn truy suất POC7, thì bạn càng phải đợi lâu hơn nữa. Lý do là mã hóa video tận dụng sự giống nhau của các bức ảnh lân cận nên chỉ mã hóa sự khác biệt. Từ đó gây ra sự phụ thuộc của một nhóm ảnh. 
 
-![Group-of-picture-8](images/MLVD_fig2.png)
+![image](/assets/images/MLVD_fig2.png)
 
 Lưu ý, cấu trúc lặp lại này phụ thuộc tần suất suất hiện của khung hình I – Intra frame (khung dự đoán liên khung). Hình trên ví dụ là 4 và 8, trong thực tế thường tần suất suất hiện của I frame cỡ 120 khung trở lên nên cần lựa chọn khung hình vừa chất lượng cao vừa giảm trễ truy suất. 
 
 Phía trên là cấu hình dạng truy suất ngẫu nhiên (Random Access), còn các cấu hình khác như Độ trễ thấp (Low-delay) thì cách thức truy vấn lại khác nhau một chút. 
 
-
-
 ## Tác giả
+[Thuong Nguyen Canh](https://ngcthuong.github.io)
