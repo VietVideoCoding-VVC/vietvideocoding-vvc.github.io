@@ -1,0 +1,59 @@
+I"#<h2 id="tổng-quan-về-dash">TỔNG QUAN VỀ DASH</h2>
+<p>Dynamic Adaptive Video Streaming over HTTP (DASH hay MPEG-DASH) là một chuẩn truyền tải video thích ứng được chuẩn hóa bởi MPEG và ISO nhằm mục đích nâng cao chất lượng truyền tải các nội dung đa phương tiện khi truyền qua HTTP.</p>
+
+<p><img src="https://scontent-sjc3-1.xx.fbcdn.net/v/t1.0-9/82877387_3187842987912388_4347115985749147648_n.jpg?_nc_cat=108&amp;_nc_sid=825194&amp;_nc_ohc=n1ijKWh6RBAAX98D8Gq&amp;_nc_ht=scontent-sjc3-1.xx&amp;oh=3c43dd536eea8fac6175d96930c53f1d&amp;oe=5F29BE26" alt="Fig.1" />
+Một hệ thống DASH bao gồm 3 thành phần chính: Server, Client và Network (hình 1).
+Server encode và lưu trữ video với những mức chất lượng khác nhau (Ví dụ 4K, 1080p, 720p,…). Mỗi video ở từng mức chất lượng này lại được chia nhỏ theo thời gian thành những phân đoạn (segment) có độ dài bằng nhau (ví dụ 1 giây, 2 giây, 4 giây,…).</p>
+
+<p>Lý do chia thành nhiều mức chất lượng khác nhau là để phù hợp với nhiều loại chất lượng đường truyền khác nhau. Mạng 3G (tốc độ trung bình khoảng 3 Mbps[1]) thì không thể truyền được video 4K (tốc độ bit là có thể lên đến 45Mbps![2]). Và một lý do để chia nhỏ video theo thời gian là để phía client chỉ cần tải một phần video là có thể bắt đầu xem được thay vì phải tải toàn bộ video. Điều này còn giúp tiết kiệm băng thông trong trường hợp client chỉ xem một đoạn video rồi chuyển sang video khác.</p>
+
+<p>Ở phía client, nó sẽ gửi các HTTP request đến phía server để yêu cầu mức chất lượng mong muốn. Sau khi nhận được request, server sẽ gửi một (hoặc nhiều) segment cho client. Các segment này được lưu tại bộ đệm (buffer) của client trước khi được encode. Chất lượng mong muốn sẽ được quyết định bởi thuật toán gọi là “Adaptive bitrate (ABR) algorithm”. Rất nhiều ý tưởng đã được đề xuất cho ABR này (xem thêm [3]) mà phổ biến nhất là dựa vào tốc độ mạng (throughput) và/hoặc tình trạng buffer.</p>
+
+<p>Những vấn đề nghiên cứu phổ biến trong DASH</p>
+<ol>
+  <li>Live latency</li>
+  <li>Video quality, Quality stability, User experience</li>
+  <li>Stalls/rebuffering</li>
+  <li>Throughput prediction</li>
+</ol>
+
+<h2 id="http2-và-những-lợi-ích-cho-dash">HTTP/2 VÀ NHỮNG LỢI ÍCH CHO DASH</h2>
+
+<p>HTTP/2 giới thiệu nhiều tính năng mới như multiplexing, server push, stream priority, và stream termination giúp cho client có nhiều tương tác với server trong quá trình truyền tải video. Những tính năng này được mô tả rõ tại RFC 7540</p>
+
+<h3 id="1-multiplexing">1. Multiplexing</h3>
+<p>Đây là tính năng cho phép client mở nhiều luồng (stream) dữ liệu cùng 1 lúc thông qua 1 connnection. Ở HTTP/1 và HTTP/1.1 (gọi chung là HTTP/1.x), nếu client muốn gửi nhiều request cùng một lúc thì nó sẽ phải mở nhiều TCP connection vì mỗi response từ server được vận chuyển trên một connection. Điều này dẫn đến tình trạng head-of-line blocking [1] và việc sử dụng không hiệu quả TCP connection.
+Trong khi đó, HTTP/2 với tính năng multiplexing cho phép các request (và response) được gửi song song mà không block nhau và chỉ cần một connection duy nhất. Vì thế có thể loại bỏ được những latency không cần thiết.
+Trong nhiều bài báo khoa học về video streaming hiện nay, tính năng này thường được kết hợp với stream priority (sẽ được nói rõ hơn ở mục 3.)</p>
+
+<h3 id="2-server-push">2. Server push</h3>
+<p>Có lẽ đây là tính năng được giới nghiên cứu quan tâm nhiều nhất kể từ khi HTTP/2 ra đời. Ở HTTP/1.1, để client nhận được MỘT segment, nó phải gửi MỘT request đến server. Như vậy là tốn rất nhiều request gửi lên mạng và cũng tốn thời gian để gửi và nhận request vì khoảng thời gian đó bandwidth không được sử dụng để tải segment (RTT). Hình 1(a) [2] mô tả rõ hơn về vấn đề này. Có thể thấy rằng để nhận được 1 segment (s_(n-k+1)) thì client phải gửi 1 request và chờ 1 khoảng thời gian là RTT để nhận được bit đầu tiên của segment đó. Như vậy là trong khoảng thơi gian RTT này, bandwidth đã không được sử dụng, dẫn đến lãng phí.</p>
+
+<p>Tính năng server push của HTTP/2 giúp giải quyết được vấn đề trên. Chỉ với 1 request, client có thể nhận được một, nhiều hoặc thậm chí là (về mặt lý thuyết) vô hạn segment như hình 1(b) [3]. Nhận được reqest yêu cầu K segment với mức bitrate là B từ phía client, server sẽ gửi liên tiếp K segment có mức bitrate giống nhau như yêu cầu. Bài toán nghiên cứu đặt ra là “Giá trị của K nên là bao nhiêu?”.</p>
+
+<p>Tại sao lại có bài toán trên? Đó là vì khi client đang download K segment từ 1 request với mức chất lượng B (kbps), client không thể thay đổi mức chất lượng của những segment này (trừ khi client dùng tính năng stream termination để hủy bỏ việc download các segment). Việc này dẫn đến khi bandwidth giảm đột ngột và giá trị của K lớn, client sẽ bị rebuffering (hay còn gọi là stall hoặc giật lag) gây khó chịu cho người dùng. Hay nói cách khác, khi K lớn thì client sẽ chậm thích ứng với sự biến đổi của bandwidth. Nhưng khi K nhỏ, số lượng request lại lớn.</p>
+
+<p>Một vài bài báo đề xuất giải pháp cho việc chọn giá trị của K là [4][5][6]. Có vẻ như chưa có giải pháp nào được cho là tối ưu cả nên mặc dù gần đây, số lượng bài báo về tính năng này đã giảm đi nhưng nó vẫn là một vấn đề có thể lưu tâm nghiên cứu.</p>
+
+<h3 id="3-stream-priority">3. Stream priority</h3>
+<p>Client sử dụng tính năng stream priority để thông báo với server về tầm quan trọng khác nhau của các loại dữ liệu. Server sẽ dựa vào đó để phân bổ các tài nguyên của nó cho phù hợp khi push các segment về cho client. Hiện tại tính năng này được nghiên cứu nhiều trong việc truyền video các loại video sử dụng tile technique như video VR, và video 360. Video VR và video 360 sử dụng tile technique sẽ được chia thành nhiều tile có thể được decode độc lập tại client giống như 1 cái màn hình lớn được ghép lại từ nhiều màn hình nhỏ ở nhiều chương trình ca nhạc ngoài trời. Hình 2 là ví dụ cho 1 video 360 được chia thành 8x8 tile. Stream priority được sử dụng để thông báo cho server những tile nào được ưu tiên hơn (thuộc vùng người dùng nhìn thấy và có bitrate cao hơn) để ưu tiên push về client [7][8]. Ngoài ra, có 1 bài báo năm 2019 nói về việc sử dụng stream priority khi tải các frame của video cho trường hợp low latency [9].</p>
+
+<h3 id="4-stream-termination">4. Stream termination</h3>
+<p>Khi client nhận thấy có dữ liệu đang hoặc sắp được tải không còn có ích với nó nữa thì stream termination có thể được sử dụng để server dừng push những dữ liệu này ngay khi nó nhận được yêu cầu của client thông qua RST_STREAM frame.
+TÍnh năng này được áp dụng cùng với stream priority khi truyền video 360, video VR để hủy những tile đã quá hạn playout [7][8] hoặc hủy các segment [10] hay frame [9] khi không cần thiết.</p>
+
+<h2 id="tài-liệu-tham-khảo">Tài liệu tham khảo</h2>
+<p>[1] https://en.wikipedia.org/wiki/Head-of-line_blocking
+[2] https://www.researchgate.net/publication/283073448_HTTP2-Based_Methods_to_Improve_the_Live_Experience_of_Adaptive_Streaming
+[3] https://dl.acm.org/doi/pdf/10.1145/2910642.2910652
+[4] https://www.jstage.jst.go.jp/article/comex/5/3/5_2015XBL0177/_pdf
+[5] https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=7800333
+[6] https://dl.acm.org/doi/pdf/10.1145/2910642.2910652?download=true
+[7] https://ieeexplore.ieee.org/abstract/document/8108082
+[8] https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8465722
+[9] https://dl.acm.org/doi/10.1145/3280854
+[10] https://ieeexplore.ieee.org/document/8396293</p>
+
+<h2 id="tác-giả">Tác giả</h2>
+<p><a href="https://www.facebook.com/minhimo">Minh Nguyễn</a></p>
+:ET
