@@ -1,0 +1,53 @@
+{% if page.series %}
+  {% comment %}
+    Lọc tất cả bài có cùng series, sắp xếp theo series_order (nếu có) rồi theo date.
+  {% endcomment %}
+
+  {% assign siblings = site.posts | where: "series", page.series %}
+  {% assign with_order = siblings | where_exp:"p","p.series_order" | sort: "series_order" %}
+  {% assign without_order = siblings | where_exp:"p","p.series_order == nil" | sort: "date" %}
+  {% assign all = with_order | concat: without_order %}
+
+  {% assign idx = -1 %}
+  {% for p in all %}
+    {% if p.url == page.url %}
+      {% assign idx = forloop.index0 %}
+    {% endif %}
+  {% endfor %}
+
+  {% if idx != -1 %}
+  <hr>
+  <div class="series-nav" style="display:flex;justify-content:space-between;gap:1rem;align-items:center;">
+    <div>
+      <strong>Series:</strong> {{ page.series }}
+      <span style="opacity:.7"> ({{ all | size }} phần)</span>
+    </div>
+    <div style="display:flex;gap:.5rem;">
+      {% if idx > 0 %}
+        {% assign prev = all | slice: idx | last %}
+        <a href="{{ prev.url }}">&larr; Phần trước</a>
+      {% endif %}
+      {% if idx < all.size | minus: 1 %}
+        {% assign next = all | slice: idx | plus: 1 | first %}
+        <a href="{{ next.url }}">Phần tiếp &rarr;</a>
+      {% endif %}
+    </div>
+  </div>
+
+  <details style="margin-top:.5rem;">
+    <summary>Xem toàn bộ các phần</summary>
+    <ol style="margin-top:.5rem;">
+      {% for p in all %}
+        <li>
+          {% if p.url == page.url %}
+            <strong>{{ p.title }}</strong>
+          {% else %}
+            <a href="{{ p.url }}">{{ p.title }}</a>
+          {% endif %}
+          {% if p.series_order %}<small> (#{{ p.series_order }})</small>{% endif %}
+        </li>
+      {% endfor %}
+    </ol>
+  </details>
+  {% endif %}
+{% endif %}

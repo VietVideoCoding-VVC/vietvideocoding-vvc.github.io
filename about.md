@@ -16,9 +16,7 @@ Vì vậy, nhóm **Việt Video Coding (VVC )** được thành lập với mụ
 Vì đây là những công nghệ bao gồm rất nhiều mảng, ngành khác nhau, nhóm luôn hi vọng và chào đón những bài viết, chia sẻ, cũng như của các bạn về chủ đề liên quan. Bên cạnh đó sẽ là những chia sẻ kinh nghiệm nghề nghiệp nếu các bạn muốn tìm hiểu và theo đuổi ngành công nghệ này. 
 
 ## Thành viên sáng lập 
-- Nguyễn Cảnh Thướng. Ph.D., Senior researcher, USA.  [Website](https://ngcthuong.github.io/).
-- Hoàng Văn Xiêm. Ph.D, Lecturer/Asst. Prof VNU-UET, Vietnam. [Website](https://sites.google.com/site/xiemhoang/home?authuser=0).
-- Nguyễn Minh, PhD student, University of Klagenfurt, Austria. [Website](https://sites.google.com/view/minhnguyenkstn?fbclid=IwAR36uahlOXj6kYKtT0_QSZDsVexMk9esnC2ny0SsgJLudQIRFgeSR1OE0AM)
+- [Nguyễn Cảnh Thướng](https://ngcthuong.github.io/). Ph.D., Staff Researcher, Dolby Laboratories, USA.
 
 ## Thông tin liên hệ
 Mọi chi tiết liên hệ, chia sẻ bài viết xin gửi về 
@@ -28,4 +26,3 @@ Mọi chi tiết liên hệ, chia sẻ bài viết xin gửi về
  
 
 *VVC cũng là viết tắt cho chuẩn nén video mới nhất Versatile Video Coding - H.266 của MPEG, chuẩn hoá hoàn thành năm 2020. 
-
