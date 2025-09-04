@@ -32,13 +32,13 @@ Khỏi phải nói, nén video được xem là công nghệ lõi và được �
 Hình 2: Các công ty đóng góp bằng sáng chế trong chuẩn H.265/HEVC
 </p>
 
-![Các công ty tham gia cấp phép VVC](/assets/images/20250903_VVC_Licensor.jpg){: .img-80" }
+![Các công ty tham gia cấp phép VVC](/assets/images/20250903_VVC_Licensor.jpg){: .img-80 }
 
 <p style="figure-caption">
 Hình 3: Các công ty đóng góp bằng sáng chế trong chuẩn H.266/VVC
 </p>
 
-![Các thành viên của AOM/AV1](/assets/images/20250903_AOM_Members.webp){: .img-80" }
+![Các thành viên của AOM/AV1](/assets/images/20250903_AOM_Members.webp){: .img-80 }
 
 <p style="figure-caption">
 Hình 4: Các công ty tham gia AOM và phát triển AV1.
